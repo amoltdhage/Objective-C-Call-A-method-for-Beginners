@@ -23,31 +23,30 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"%@",product);
         
+        //Storing the result of a message
         
-     //Storing the result of a message
-        
-    //send description to foods..
+        //send description to foods..
         
         NSString *result = [product description];
         
-    //pass in result here..
+        //pass in result here..
         
         NSLog(@"%@", result);
         
         
-    //Trying to log an NSUInteger..
+        //Trying to log an NSUInteger..
         
         NSString *device = @"Apple Macbook Pro";
         
         NSUInteger deviceLength = [device length];
         
-    //NSLog(@"City has %@ characters", deviceLength);
-   //replacing the %@ placeholder with %lu ..
+        //NSLog(@"City has %@ characters", deviceLength);
+        //replacing the %@ placeholder with %lu ..
         
-        NSLog(@"City has %lu characters", deviceLength);
+        NSLog(@"Device has %lu characters", deviceLength);
         
         
-   //Operating on NSNumbers..
+        //Operating on NSNumbers..
         
         
         NSNumber *AmolAge = @25;
@@ -60,47 +59,48 @@ int main(int argc, const char * argv[]) {
         NSLog(@"Amol is actually %lu years old.", AmolRealAge);
         
         
-   //Appending 2 strings..
+        //Appending 2 strings..
         
         NSString *firstName = @"Amol";
         NSString *lastName = @"Dhage";
         
-   //The full name by appending the firstName and lastName together using the stringByAppendingString: message..
+        //The full name by appending the firstName and lastName together using the stringByAppendingString: message..
         
         NSLog(@"%@",[firstName stringByAppendingString:lastName]);
         
         
-   //Nesting messages..
         
-      //NSString *firstName = @"Amol";
-     //NSString *lastName = @"Dhage";
+        //Nesting messages..
+        
+        //NSString *firstName = @"Amol";
+        //NSString *lastName = @"Dhage";
         
         
-   //Fix the code to log the full name with a space between the firstName and lastName.
+        //Fix the code to log the full name with a space between the firstName and lastName.
         
-
+        
         NSString *fullName = [[firstName stringByAppendingString:@" "] stringByAppendingString:lastName];
         
         NSLog(@"%@", fullName);
         
         
-    //Working with long message names..
+        //Working with long message names..
         
-    //NSString *firstName = @"Amol";
-    //NSString *lastName = @"Dhage";
+        //NSString *firstName = @"Amol";
+        //NSString *lastName = @"Dhage";
         
-    //NSString *fullName = [[firstName stringByAppendingString:@" "]stringByAppendingString:lastName];
+        //NSString *fullName = [[firstName stringByAppendingString:@" "]stringByAppendingString:lastName];
         
         NSString *replaced = [fullName stringByReplacingOccurrencesOfString:firstName
-                            withString:lastName];
+                                                                 withString:lastName];
         
         NSLog(@"%@", replaced);
         
         
         
-    //Creating an NSString with a message
+        //Creating an NSString with a message
         
-    // make copy of firstName by sending the stringWithString: message to the NSString class.
+        // make copy of firstName by sending the stringWithString: message to the NSString class.
         
         NSString *copy = [NSString stringWithString:firstName];
         
@@ -108,30 +108,31 @@ int main(int argc, const char * argv[]) {
         
         
         
-    //Creating an NSString with alloc/init
+        //Creating an NSString with alloc/init
         
-    
         
-    //use alloc and initWithString: instead of stringWithString: to make a copy of firstName.
         
-    NSString *info = [[NSString alloc] initWithString:firstName];
+        //use alloc and initWithString: instead of stringWithString: to make a copy of firstName.
+        
+        NSString *info = [[NSString alloc] initWithString:firstName];
         
         
         NSLog(@"%@ is a info of %@", info, firstName);
         
         
-   //Refactoring string combination..
+        //Refactoring string combination..
         
-     //NSString *firstName = @"Amol";
-     //NSString *lastName = @"Dhage";
+        //NSString *firstName = @"Amol";
+        //NSString *lastName = @"Dhage";
         
-  //Update the code to use stringWithFormat: instead of stringByAppendingString:
+        //Update the code to use stringWithFormat: instead of stringByAppendingString:
         
         
         
         NSString *fullNameinfo = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
         
         NSLog(@"%@", fullNameinfo);
+        
         
     }
     return 0;
